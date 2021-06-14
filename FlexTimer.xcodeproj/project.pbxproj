@@ -19,6 +19,8 @@
 		7DA98F542678018A00C44173 /* FlexTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98F532678018A00C44173 /* FlexTimerView.swift */; };
 		7DA98F60267801C900C44173 /* CALayer+Pause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98F5F267801C900C44173 /* CALayer+Pause.swift */; };
 		7DA98F66267801CF00C44173 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98F65267801CF00C44173 /* Utils.swift */; };
+		7DA98F6B2678100400C44173 /* FlexTimerView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98F6A2678100400C44173 /* FlexTimerView+Tap.swift */; };
+		7DA98F702678146000C44173 /* FlexTimerView+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98F6F2678146000C44173 /* FlexTimerView+Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		7DA98F532678018A00C44173 /* FlexTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexTimerView.swift; sourceTree = "<group>"; };
 		7DA98F5F267801C900C44173 /* CALayer+Pause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Pause.swift"; sourceTree = "<group>"; };
 		7DA98F65267801CF00C44173 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7DA98F6A2678100400C44173 /* FlexTimerView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlexTimerView+Tap.swift"; sourceTree = "<group>"; };
+		7DA98F6F2678146000C44173 /* FlexTimerView+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlexTimerView+Colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				7DA98F532678018A00C44173 /* FlexTimerView.swift */,
+				7DA98F6A2678100400C44173 /* FlexTimerView+Tap.swift */,
+				7DA98F6F2678146000C44173 /* FlexTimerView+Colors.swift */,
 			);
 			path = "Bindable Views";
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				7DA98F542678018A00C44173 /* FlexTimerView.swift in Sources */,
 				7DA98F66267801CF00C44173 /* Utils.swift in Sources */,
 				7DA98F4D2678015C00C44173 /* FlexTimer.swift in Sources */,
+				7DA98F702678146000C44173 /* FlexTimerView+Colors.swift in Sources */,
+				7DA98F6B2678100400C44173 /* FlexTimerView+Tap.swift in Sources */,
 				7DA98EF42676A80D00C44173 /* AppDelegate.swift in Sources */,
 				7DA98EF62676A80D00C44173 /* SceneDelegate.swift in Sources */,
 			);

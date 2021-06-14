@@ -10,30 +10,19 @@ import CoreGraphics
 
 
 /**
- This is our view, bound to a `FlexTimer` instance and
+ This is our view, bound in an MVVM style to a `FlexTimer` instance and its layers
 */
 class FlexTimerView: UIView {
 
     /**
-     Colors in struct form
+     Callback format for external object responses
     */
-    struct Colors {
-        
-        /**
-         The color of the bar as it fills the circle
-        */
-        static let strokeColor: UIColor = UIColor.black
-        
-        /**
-         The color of the bar before being filled
-        */
-        static let grayStrokeColor: UIColor = UIColor.gray
-        
-        /**
-         The color of the bar before being filled
-        */
-        static let fillColor: UIColor? = .none
-    }
+    typealias OnChangeCallback = (FlexTimer.State) -> Void
+    
+    /**
+     A callback that can be registered for external components to receive change events
+    */
+    var onChange: OnChangeCallback? = nil
     
     /**
      Auto create and add our tap to this view
@@ -117,7 +106,7 @@ class FlexTimerView: UIView {
     var flexTimer: FlexTimer!
     
     /**
-     Lazy loaded animation
+     Lazy loaded `strokeEnd` animation.
     */
     private var _animation: CABasicAnimation?
     var animation: CABasicAnimation {
@@ -146,13 +135,12 @@ class FlexTimerView: UIView {
     
 
     /**
-     The bar as it fills
+     The bar layer as it fills
     */
     private var _progressLayer: CAShapeLayer?
     var progressLayer: CAShapeLayer {
         
         // TODO: Gradient colors would be nice.
-        
         guard _progressLayer == nil else {
             return _progressLayer!
         }
@@ -197,7 +185,7 @@ class FlexTimerView: UIView {
             size: CGSize(width: square.size.width - strokeLayer.lineWidth, height: square.size.height - strokeLayer.lineWidth)
         )
         
-        
+        // An optional color-layer fill
         fillLayer = CAShapeLayer()
         fillLayer.frame = layer.frame
         fillLayer.path = CGPath(ellipseIn: innerSquare, transform: nil)
@@ -215,11 +203,11 @@ class FlexTimerView: UIView {
         
         if progressLayer.superlayer == nil {
             
+            // Add the tap gesture
             if tapGesture == nil {
                 tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap(_:) ) )
                 self.addGestureRecognizer(tapGesture!)
             }
-            
             
             // Grey empty stroke first
             layer.addSublayer(emptyStrokeLayer)
@@ -229,10 +217,6 @@ class FlexTimerView: UIView {
             
             // Then our colored stroke
             layer.addSublayer(progressLayer)
-            
-            print("Layer frame: \(layer.frame), bounds: \(layer.bounds)")
-            print("Adding sublayer. frame: \(progressLayer.frame), bounds: \(progressLayer.bounds)")
-            print("Empty Path. frame: \(emptyStrokeLayer.frame), bounds: \(emptyStrokeLayer.bounds)")
 
         }
         
@@ -274,42 +258,10 @@ extension FlexTimerView: CAAnimationDelegate {
             
             progressLayer.add(rewindAnimation, forKey: "strokeEnd")
 
-            
+            // Inform others
+            onChange?(flexTimer.state)
         }
     }
 }
 
-extension FlexTimerView {
-    
-    @objc
-    func tap(_ gesture: UITapGestureRecognizer) {
-        print("tapped")
-        
-        if flexTimer.state != .running {
-            print("Animation duration: \(animation.duration)")
-            
-            // Start the timer
-            flexTimer.start()
-            
-            // If the animation has not been added, we'll add it.
-            if progressLayer.animation(forKey: "strokeEnd") == nil {
-            
-                print("Animation added")
-                progressLayer.add(animation, forKey: "strokeEnd")
 
-            } else {
-                
-                print("Animation resumed")
-                progressLayer.resumeAnimation()
-            }
-            
-        } else {
-            
-            print("Animation paused")
-            flexTimer.stop()
-            progressLayer.pauseAnimation()
-        }
-        
-
-    }
-}
