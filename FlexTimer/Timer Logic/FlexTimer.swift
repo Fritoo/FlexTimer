@@ -8,7 +8,12 @@
 
 import Foundation
 
-
+/**
+ A custom rolled timer, based on `Timer` ( aka `NSTimer` ) but with finer grained controls over starting/stopping and
+ with incremental callout points and completion.
+ 
+ As with the original `Timer` class, once cancelled a timer will be considered invalid and cannot be reused.
+*/
 @IBDesignable
 class FlexTimer : CustomStringConvertible {
 
@@ -133,6 +138,11 @@ class FlexTimer : CustomStringConvertible {
         
         // Cancelled timers are considered invalid.
         guard state != .cancelled else { return self }
+        
+        // Reset if we're being reused
+        if state == .ended {
+            elapsed = 0
+        }
         
         print(self)
         

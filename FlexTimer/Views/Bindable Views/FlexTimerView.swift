@@ -82,10 +82,17 @@ class FlexTimerView: UIView {
     @IBInspectable
     var duration: Double = 5.0 {
         didSet {
-            flexTimer = FlexTimer(length: duration)
-            resetLayers()
 
+            resetAll()
         }
+    }
+    
+    /**
+     Reload the timer and reset all layers
+    */
+    func resetAll() {
+        flexTimer = FlexTimer(length: duration)
+        resetLayers()
     }
     
     /**
@@ -126,7 +133,8 @@ class FlexTimerView: UIView {
             strokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear )
             strokeAnimation.autoreverses = false
             strokeAnimation.delegate = self
-            
+            strokeAnimation.setValue("forward", forKey: "animationID")
+
             _animation = strokeAnimation
             return _animation!
         }
@@ -243,6 +251,8 @@ extension FlexTimerView: CAAnimationDelegate {
         rewindAnimation.fromValue = 1
         rewindAnimation.toValue = 0
         rewindAnimation.autoreverses = false
+        rewindAnimation.delegate = self
+        rewindAnimation.setValue("rewind", forKey: "animationID")
         
         return rewindAnimation
     }
@@ -253,13 +263,31 @@ extension FlexTimerView: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         
         if flag == true {
-            // rewind
-            print("Completion")
             
-            progressLayer.add(rewindAnimation, forKey: "strokeEnd")
+            // Manage transitions between our animations
+            switch anim.value(forKey: "animationID") as? String {
+                case "forward":
+                    // rewind
+                    print("Completion")
+                    
+                    progressLayer.add(rewindAnimation, forKey: "strokeEnd")
+                    
+                    // Inform others
+                    onChange?(flexTimer.state)
+                    break
+                    
+                // Prepare timer, animation and layers to start over
+                case "rewind":
+                    // Trigger a reset of timer & layers
+                    resetAll()
+                    break
+                    
+                default:
+                    // Do nothin
+                    break
+            }
 
-            // Inform others
-            onChange?(flexTimer.state)
+            
         }
     }
 }

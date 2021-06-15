@@ -1,0 +1,131 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/AppDelegate.swift",
+      "line": 11,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.application(_:configurationForConnecting:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/AppDelegate.swift",
+      "line": 28,
+      "symbol": "AppDelegate.application(_:didDiscardSceneSessions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 10,
+      "symbol": "SceneDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 12,
+      "symbol": "SceneDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 15,
+      "symbol": "SceneDelegate.scene(_:willConnectTo:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 22,
+      "symbol": "SceneDelegate.sceneDidDisconnect(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 29,
+      "symbol": "SceneDelegate.sceneDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 34,
+      "symbol": "SceneDelegate.sceneWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 39,
+      "symbol": "SceneDelegate.sceneWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/SceneDelegate.swift",
+      "line": 44,
+      "symbol": "SceneDelegate.sceneDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/Utils/Utils.swift",
+      "line": 11,
+      "symbol": "Utils",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/ViewController.swift",
+      "line": 10,
+      "symbol": "ViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/ViewController.swift",
+      "line": 12,
+      "symbol": "ViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/Views/Bindable Views/FlexTimerView.swift",
+      "line": 112,
+      "symbol": "FlexTimerView.animation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/Views/Bindable Views/FlexTimerView.swift",
+      "line": 141,
+      "symbol": "FlexTimerView.progressLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer/FlexTimer/Views/Bindable Views/FlexTimerView.swift",
+      "line": 202,
+      "symbol": "FlexTimerView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/milesalden/Personal/Projects/ios/FlexTimer/FlexTimer/FlexTimer"
+}
