@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7DA98EF42676A80D00C44173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98EF32676A80D00C44173 /* AppDelegate.swift */; };
-		7DA98EF62676A80D00C44173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98EF52676A80D00C44173 /* SceneDelegate.swift */; };
 		7DA98EF82676A80D00C44173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA98EF72676A80D00C44173 /* ViewController.swift */; };
 		7DA98EFB2676A80D00C44173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA98EF92676A80D00C44173 /* Main.storyboard */; };
 		7DA98EFD2676A80F00C44173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA98EFC2676A80F00C44173 /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		7DA98EF02676A80D00C44173 /* FlexTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA98EF32676A80D00C44173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DA98EF52676A80D00C44173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DA98EF72676A80D00C44173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DA98EFA2676A80D00C44173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DA98EFC2676A80F00C44173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				7DA98EF32676A80D00C44173 /* AppDelegate.swift */,
-				7DA98EF52676A80D00C44173 /* SceneDelegate.swift */,
 				7DA98F4B2678015C00C44173 /* Timer Logic */,
 				7DA98F512678018A00C44173 /* Views */,
 				7DA98EF72676A80D00C44173 /* ViewController.swift */,
@@ -324,7 +321,6 @@
 				7DA98F702678146000C44173 /* FlexTimerView+Colors.swift in Sources */,
 				7DA98F6B2678100400C44173 /* FlexTimerView+Tap.swift in Sources */,
 				7DA98EF42676A80D00C44173 /* AppDelegate.swift in Sources */,
-				7DA98EF62676A80D00C44173 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RS6GEHA65;
 				INFOPLIST_FILE = FlexTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RS6GEHA65;
 				INFOPLIST_FILE = FlexTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
